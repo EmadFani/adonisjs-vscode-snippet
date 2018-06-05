@@ -1,0 +1,1365 @@
+{
+    "query builder Database": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Database.table($1)",
+        "body": [
+            "Database.table($1)"
+        ],
+        "description": "Query Builder : Database.table('users')"
+    },
+    "query builder from": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Database.from($1)",
+        "body": [
+            "Database.from($1)"
+        ],
+        "description": "Query Builder : Database.from('users')"
+    },
+    "Query Builder first": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".first()",
+        "body": [
+            ".first()"
+        ],
+        "description": "Query builder .first()"
+    },
+    "Query Builder whereNot": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".whereNot({'fieldName',value})",
+        "body": [
+            ".whereNot({'$1','$2'})"
+        ],
+        "description": "Query builder .whereNot({'fieldName',value})"
+    },
+    "Query Builder whereIn": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".whereIn('id', [1,2,3])",
+        "body": [
+            ".whereIn('$1', [$2])"
+        ],
+        "description": "Query builder .whereIn('id', [1,2,3])"
+    },
+    "Query Builder whereNotIn": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".whereNotIn('id', [1,2,3])",
+        "body": [
+            ".whereNotIn('$1', [$2])"
+        ],
+        "description": "Query builder .whereNotIn('id', [1,2,3])"
+    },
+    "Query Builder whereNull": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".whereNull('')",
+        "body": [
+            ".whereNull('$1')"
+        ],
+        "description": "Query builder .whereNull('deleted_at')"
+    },
+    "Query Builder whereNotNull": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".whereNotNull('')",
+        "body": [
+            ".whereNotNull('$1')"
+        ],
+        "description": "Query builder .whereNotNull('created_at')"
+    },
+    "lucid find": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".find($1)",
+        "body": [
+            ".find($1)"
+        ],
+        "description": "Lucid Query, find(id)"
+    },
+    "lucid findBy": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".findBy('$1',$2)",
+        "body": [
+            ".findBy('$1',$2)"
+        ],
+        "description": "Lucid Query, findBy('FieldName',Vlaue)"
+    },
+    "lucid fetch": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".fetch()",
+        "body": [
+            ".fetch()"
+        ],
+        "description": "Lucid Query, adonisjs Lucid Query Builder Fetch()"
+    },
+    "lucid where": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".where('$1', $2)",
+        "body": [
+            ".where('$1', $2)"
+        ],
+        "description": "Lucid Query, where('fieldName', value)"
+    },
+    "lucid wherePivot": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".wherePivot('App/Models/$1', $2)",
+        "body": [
+            ".wherePivot('App/Models/$1', $2)"
+        ],
+        "description": "Lucid Query, wherePivot('fieldName', value)"
+    },
+    "lucid pivotModel": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".wherePivot('App/Models/$1')",
+        "body": [
+            ".pivotModel('App/Models/$1')"
+        ],
+        "description": "Lucid Query, pivotModel('App/Models/ExampleModel')"
+    },
+    "lucid with": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".with('$1')",
+        "body": [
+            ".with('$1')"
+        ],
+        "description": "Lucid Query, with('tableName')"
+    },
+    "lucid query": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".query()",
+        "body": [
+            ".query()"
+        ],
+        "description": "Lucid Query, adonisjs Lucid Query Builder query()"
+    },
+    "lucid with builder": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".with('$1', (builder) => {builder.where('$2', $3) })",
+        "body": [
+            ".with('$1', (builder) => {builder.where('$2', $3) })"
+        ],
+        "description": "Lucid Query, with( Builder->(TargetTable),(TargetField),(Value))"
+    },
+    "lucid load": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".load('$1')",
+        "body": [
+            ".load('$1')"
+        ],
+        "description": "Lucid Query, load('tableName')"
+    },
+    "lucid loadMany array": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".loadMany(['$1', '$2'])",
+        "body": [
+            ".loadMany(['$1', '$2'])"
+        ],
+        "description": "Lucid Query, loadMany(['tableName',...])"
+    },
+    "lucid loadMany object": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".loadMany({'$1', '$2'})",
+        "body": [
+            ".loadMany({'$1', '$2'})"
+        ],
+        "description": "Lucid Query, loadMany({'name',...})"
+    },
+    "lucid (builder)": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "(builder) => builder.where('$1', $2)",
+        "body": [
+            "(builder) => builder.where('$1', $2)"
+        ],
+        "description": "Lucid Query, (builder) => builder.where('fieldName', value)"
+    },
+    "lucid has": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".has('$1')",
+        "body": [
+            ".has('$1')"
+        ],
+        "description": "Lucid Query, has(tableName)"
+    },
+    "lucid doesntHave": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".doesntHave('$1')",
+        "body": [
+            ".doesntHave('$1')"
+        ],
+        "description": "Lucid Query, doesntHave(tableName)"
+    },
+    "lucid whereHas": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".whereHas('$1', (builder) => {builder.where('$2', $3)}, '$4', $5)",
+        "body": [
+            ".whereHas('$1', (builder) => {builder.where('$2', $3)}, '$4', $5)"
+        ],
+        "description": "Lucid Query, .whereHas(tableName ,fieldName, value, expression(>), value"
+    },
+    "lucid whereDoesntHave": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".whereDoesntHave('$1', (builder) => {builder.where('$2', $3)})",
+        "body": [
+            ".whereDoesntHave('$1', (builder) => {builder.where('$2', $3)})"
+        ],
+        "description": "Lucid Query, .whereDoesntHave('tableName', (builder) => {builder.where('FieldName', Value)})"
+    },
+    "lucid withCount": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".withCount('$1')",
+        "body": [
+            ".withCount('$1')"
+        ],
+        "description": "Lucid Query, .withCount('tableName')"
+    },
+    "lucid withCount builder": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".withCount('$1', (builder) => {builder.where('$2', $3)})",
+        "body": [
+            ".withCount('$1', (builder) => {builder.where('$2', $3)})"
+        ],
+        "description": "Lucid Query, .withCount('tableName', (builder) => {builder.where('FieldName', Value)})"
+    },
+    "lucid .save": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".save({object})",
+        "body": [
+            ".save({ $1 : '$2' ,})"
+        ],
+        "description": "Lucid Query, .save({})"
+    },
+    "lucid .create": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".create({object})",
+        "body": [
+            ".create({ $1 : '$2' ,})"
+        ],
+        "description": "Lucid Query, .create({})"
+    },
+    "lucid .createMany": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".createMany( [ {object} ] )",
+        "body": [
+            ".createMany( [ {$1 : $2}, ] )"
+        ],
+        "description": "Lucid Query, .createMany( array of objects )"
+    },
+    "lucid .saveMany": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".saveMany( [ $1 ] )",
+        "body": [
+            ".saveMany( [ $1, ] )"
+        ],
+        "description": "Lucid Query, .saveMany( array )"
+    },
+    "lucid .associate": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".associate($1)",
+        "body": [
+            ".associate($1)"
+        ],
+        "description": "Lucid Query, .associate( instance )"
+    },
+    "lucid .dissociate": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".dissociate()",
+        "body": [
+            ".dissociate()"
+        ],
+        "description": "Lucid Query, .dissociate()"
+    },
+    "lucid .attach": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".attach([$1.$2])",
+        "body": [
+            ".attach([$1.$2])"
+        ],
+        "description": "Lucid Query, .attach([ tableName.FieldName ])"
+    },
+    "lucid .sync": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".sync([$1.$2])",
+        "body": [
+            ".sync([$1.$2])"
+        ],
+        "description": "Lucid Query, .sync([ tableName.FieldName ])"
+    },
+    "lucid .detach": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".detach()",
+        "body": [
+            ".detach()"
+        ],
+        "description": "Lucid Query, .detach()"
+    },
+    "lucid .update": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".update({ $1: $2 })",
+        "body": [
+            ".update({ $1: $2 })"
+        ],
+        "description": "Lucid Query, .update({ FieldName: value })"
+    },
+    "lucid .delete": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".delete()",
+        "body": [
+            ".delete()"
+        ],
+        "description": "Lucid Query, .delete()"
+    },
+    "Access Validator": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "use('Validator')",
+        "body": [
+            "use('Validator')"
+        ],
+        "description": "Use, adonisjs Access Build in modules Validator"
+    },
+    "Access geoip-lite": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "use('geoip-lite')",
+        "body": [
+            "use('geoip-lite')"
+        ],
+        "description": "Use, adonisjs Access Build in modules geoip-lite"
+    },
+    "Access Model": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "use('Model')",
+        "body": [
+            "use('Model')"
+        ],
+        "description": "Use, adonisjs Access Build in modules Model"
+    },
+    "Access Route": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "use('Route')",
+        "body": [
+            "use('Route')"
+        ],
+        "description": "Use, adonisjs Access Build in modules Route"
+    },
+    "Access Server": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "use('Server')",
+        "body": [
+            "use('Server')"
+        ],
+        "description": "Use, adonisjs Access Build in modules Server"
+    },
+    "Access Helpers": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "use('Helpers')",
+        "body": [
+            "use('Helpers')"
+        ],
+        "description": "Use, adonisjs Access Build in modules Helpers"
+    },
+    "Access Helpers.viewPath": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Helpers.viewsPath('')",
+        "body": [
+            "Helpers.viewsPath('$1')"
+        ],
+        "description": "Helpers: Helpers.viewPath('welcome.edge')"
+    },
+    "Access Helpers.appRoot": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Helpers.appRoot()",
+        "body": [
+            "Helpers.appRoot()"
+        ],
+        "description": "Helpers: Helpers.appRoot()"
+    },
+    "Access Helpers.publicPath": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Helpers.publicPath()",
+        "body": [
+            "Helpers.publicPath($1)"
+        ],
+        "description": "Helpers: Helpers.publicPath('style.css')"
+    },
+    "Access Helpers.configPath": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Helpers.configPath()",
+        "body": [
+            "Helpers.configPath($1)"
+        ],
+        "description": "Helpers: Helpers.configPath('app.js')"
+    },
+    "Access Helpers.resourcesPath": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Helpers.resourcesPath()",
+        "body": [
+            "Helpers.resourcesPath($1)"
+        ],
+        "description": "Helpers: Helpers.resourcesPath('assets/sass/app.scss')"
+    },
+    "Access Helpers.migrationsPath": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Helpers.migrationsPath()",
+        "body": [
+            "Helpers.migrationsPath($1)"
+        ],
+        "description": "Helpers: Helpers.migrationsPath('UserSchema.js')"
+    },
+    "Access Helpers.seedsPath": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Helpers.seedsPath()",
+        "body": [
+            "Helpers.seedsPath($1)"
+        ],
+        "description": "Helpers: Helpers.seedsPath('Database.js')"
+    },
+    "Access Helpers.databasePath": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Helpers.databasePath()",
+        "body": [
+            "Helpers.databasePath($1)"
+        ],
+        "description": "Helpers: Helpers.databasePath('factory.js')"
+    },
+    "Access Helpers.tmpPath": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Helpers.tmpPath()",
+        "body": [
+            "Helpers.tmpPath($1)"
+        ],
+        "description": "Helpers: Helpers.tmpPath('resized.jpg')"
+    },
+    "Access Helpers.promisify": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Helpers.promisify()",
+        "body": [
+            "Helpers.promisify($1)"
+        ],
+        "description": "Helpers: Helpers.promisify(require('fs').exists)"
+    },
+    "Access Helpers.isAceCommand": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Helpers.isAceCommand()",
+        "body": [
+            "Helpers.isAceCommand()"
+        ],
+        "description": "Helpers: Helpers.isAceCommand()"
+    },
+    "Access fs": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "use('fs')",
+        "body": [
+            "use('fs')"
+        ],
+        "description": "Use, adonisjs Access Build in modules fs"
+    },
+    "Access View": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "use('View')",
+        "body": [
+            "use('View')"
+        ],
+        "description": "Use, adonisjs Access Build in modules View"
+    },
+    "Access empty": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "use('example')",
+        "body": [
+            "use('$1')"
+        ],
+        "description": "Use, adonisjs Access Build in modules"
+    },
+    "Access src Response": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "use('Adonis/Src/Response')",
+        "body": [
+            "use('Adonis/Src/Response')"
+        ],
+        "description": "Use, adonisjs Access src Response"
+    },
+    "Access Models Url": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "use('App/Models/')",
+        "body": [
+            "use('App/Models/$1')"
+        ],
+        "description": "Use, adonisjs Access Models Folder"
+    },
+    "Access src Request": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "use('Adonis/Src/Request')",
+        "body": [
+            "use('Adonis/Src/Request')"
+        ],
+        "description": "Use, adonisjs Access src Request"
+    },
+    "Access Controllers Url": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "use('App/Controllers/')",
+        "body": [
+            "use('App/Controllers/$1')"
+        ],
+        "description": "Use, adonisjs Access Controllers Folder"
+    },
+    "Access Validators Url": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "use('App/Validators/')",
+        "body": [
+            "use('App/Validators/$1')"
+        ],
+        "description": "Use, adonisjs Access Validators Folder"
+    },
+    "hasMany": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "hasMany",
+        "body": [
+            "$1(){ return this.hasMany('App/Models/$2')}"
+        ],
+        "description": "Relationship, adonisjs hasMany relationship function"
+    },
+    "hasOne": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "hasOne",
+        "body": [
+            "$1(){ return this.hasOne('App/Models/$2')}"
+        ],
+        "description": "Relationship, adonisjs hasOne relationship function"
+    },
+    "belongsTo": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "belongsTo",
+        "body": [
+            "$1(){ return this.belongsTo('App/Models/$2')}"
+        ],
+        "description": "Relationship, adonisjs belongsTo relationship function"
+    },
+    "belongsToMany": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "belongsToMany",
+        "body": [
+            "$1(){ return this.belongsToMany('App/Models/$2')}"
+        ],
+        "description": "Relationship, adonisjs belongsToMany relationship function"
+    },
+    "manyThrough": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "belongsToMany",
+        "body": [
+            "$1(){ return this.manyThrough('App/Models/$2', $3)}"
+        ],
+        "description": "Relationship, adonisjs manyThrough relationship function"
+    },
+    "stringTable": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "table.dataType(string,text,decimal,date,dateTime,timestamps,float,integer,bigInteger,boolean,increments)",
+        "body": [
+            "table.'$1'('$2')"
+        ],
+        "description": "migration, adonisjs new table"
+    },
+    ".unique": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".unique()",
+        "body": [
+            ".unique()"
+        ],
+        "description": "migration, adonisjs Unique"
+    },
+    ".index": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".index(fieldName)",
+        "body": [
+            ".index('$1')"
+        ],
+        "description": "migration, adonisjs Unique"
+    },
+    ".nutNullable": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".nutNullable()",
+        "body": [
+            ".nutNullable()"
+        ],
+        "description": "migration, adonisjs nutNullable"
+    },
+    ".onDelete": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".onDelete(RESTRICT, CASCADE, SET NULL, NO ACTION)",
+        "body": [
+            ".onDelete('$1')"
+        ],
+        "description": "migration, adonisjs Unique"
+    },
+    ".onUpdate": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".onUpdate()",
+        "body": [
+            ".onUpdate('$1')"
+        ],
+        "description": "migration, adonisjs onUpdate"
+    },
+    ".unsigned": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".unsigned()",
+        "body": [
+            ".unsigned()"
+        ],
+        "description": "migration, adonisjs unsigned"
+    },
+    ".references": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".references('tableName(Users).fieldName(id)')",
+        "body": [
+            ".references('$1.$2')"
+        ],
+        "description": "migration, adonisjs references"
+    },
+    ".defaultTo": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".defaultTo()",
+        "body": [
+            ".references('$1')"
+        ],
+        "description": "migration, adonisjs defaultTo"
+    },
+    ".nullable": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".nullable()",
+        "body": [
+            ".nullable()"
+        ],
+        "description": "migration, adonisjs nullable"
+    },
+    "Route.get": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Route.get('$1', '$2')",
+        "body": [
+            "Route.get('$1', '$2')"
+        ],
+        "description": "Route, Route.get example"
+    },
+    "Route.post": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Route.post('$1', '$2')",
+        "body": [
+            "Route.post('$1', '$2')"
+        ],
+        "description": "Route, Route.post example"
+    },
+    "Route.put": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Route.put('$1', '$2')",
+        "body": [
+            "Route.put('$1', '$2')"
+        ],
+        "description": "Route, Route.put example"
+    },
+    "Route.delete": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Route.delete('$1', '$2')",
+        "body": [
+            "Route.delete('$1', '$2')"
+        ],
+        "description": "Route, Route.delete example"
+    },
+    "Route.resource": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Route.resource('$1', '$2')",
+        "body": [
+            "Route.resource('$1', '$2')"
+        ],
+        "description": "Route, Route.resource example"
+    },
+    "Route.apiOnly()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".apiOnly()",
+        "body": [
+            ".apiOnly()"
+        ],
+        "description": "Route : Route.resource('users', 'UsersController').apiOnly()"
+    },
+    "Route.validator()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".validator(['exampleValidator'])",
+        "body": [
+            ".validator(['$1'])"
+        ],
+        "description": "Route : Route.resource('users', 'UsersController').validator('phoneNumber')"
+    },
+    "Route.only()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".only([])",
+        "body": [
+            ".only(['$1'])"
+        ],
+        "description": "Route : Route.resource('users', 'UsersController').only()"
+    },
+    "Route.except()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".except([])",
+        "body": [
+            ".except(['$1'])"
+        ],
+        "description": "Route : Route.resource('users', 'UsersController').except()"
+    },
+    "Route.middleware()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".middleware([])",
+        "body": [
+            ".middleware(['$1'])"
+        ],
+        "description": "Route : Route.resource('users', 'UsersController').middleware()"
+    },
+    "Route.middlewareMap()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".middleware(new Map([[['$1'], ['$2']]]))",
+        "body": [
+            ".middleware(new Map([[['$1'], ['$2']]]))"
+        ],
+        "description": "Route : Route.resource('users', 'UsersController').middleware(new Map([[['store', 'update', 'destroy'], ['auth']]]))"
+    },
+    "Route.formats()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".formats(['json'])",
+        "body": [
+            ".formats(['$1'])"
+        ],
+        "description": "Route : Route.resource('users', 'UsersController').formats(['json'])"
+    },
+    "Route.domain()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".domain(':user.myapp.com')",
+        "body": [
+            ".domain('$1')"
+        ],
+        "description": "Route : Route.resource('users', 'UsersController').domain(':user.myapp.com')"
+    },
+    "Route.group()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Route.group()",
+        "body": [
+            "Route.group(() => { Route.resource('users', 'UsersController') })"
+        ],
+        "description": "Route : Route.resource('users', 'UsersController').domain(':user.myapp.com')"
+    },
+    "Route.prefix()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".prefix()",
+        "body": [
+            ".prefix('$1')"
+        ],
+        "description": "Route : Route.resource('users', 'UsersController').prefix('api/v1')"
+    },
+    "Route.namespace()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".namespace()",
+        "body": [
+            ".namespace('$1')"
+        ],
+        "description": "Route : Route.resource('users', 'UsersController').prefix('api/v1').namespace('Api/v1')"
+    },
+    "Route.on()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Route.on()",
+        "body": [
+            "Route.on('/').render('welcome')"
+        ],
+        "description": "Route : Route.on('/').render('welcome')"
+    },
+    "fileUpload": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "fileUpload",
+        "body": [
+            "const $1 = request.file('$1', {",
+            "types: ['$2'],",
+            "size: '$3mb'",
+            " })",
+
+            "await profilePic.move(Helpers.tmpPath('$4'), {",
+            "name: '$5'",
+            "})",
+
+            "if (!$1.moved()) {",
+            "return $1.error()",
+            "}",
+            "return 'File moved'"
+        ],
+        "description": "example : single file upload complete code"
+    },
+    "fileUploadMultiple": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "fileUploadMultiple",
+        "body": [
+            "const $1 = request.file('$1', {",
+            "types: ['$2'],",
+            "size: '$3mb'",
+            "})",
+            "$1.moveAll(Helpers.tmpPath('$4'), (file) => {",
+            "return {",
+            "name: `${new Date().getTime()}.${file.subtype}`",
+            "}",
+            "})",
+            "if (!$1.movedAll()) {",
+            "return $1.errors()",
+            "}"
+        ],
+        "description": "example : multiple file upload complete code"
+    },
+    "newControllerMethod": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "async example( {request, view, response, auth} ) {}",
+        "body": [
+            "async $1({ request, view, response, auth }){}"
+        ],
+        "description": "controller : adonisjs controller method"
+    },
+    "responseSend": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "response.status($1).send($2)",
+        "body": [
+            "response.status($1).send($2)"
+        ],
+        "description": "Response : response.status($1).send($2)"
+    },
+    "responseHeader": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "response.header('Content-type', 'application/json')",
+        "body": [
+            "response.header('$1', '$2')"
+        ],
+        "description": "Response : response.header('Content-type', 'application/json')"
+    },
+    "responsesafeHeader": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "response.safeHeader('Content-type', 'application/json')",
+        "body": [
+            "response.safeHeader('$1', '$2')"
+        ],
+        "description": "Response : response.safeHeader('Content-type', 'application/json')"
+    },
+    "responseRemoveHeader": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "response.removeHeader('Content-type')",
+        "body": [
+            "response.removeHeader('$1')"
+        ],
+        "description": "Response : response.removeHeader('Content-type')"
+    },
+    "responseType": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "response.type('application/json')",
+        "body": [
+            "response.type('$1')"
+        ],
+        "description": "Response : response.type('application/json')"
+    },
+    "responseCookie": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "response.cookie('cartTotal', 20)",
+        "body": [
+            "response.cookie('$1',$2)"
+        ],
+        "description": "Response : response.cookie('cartTotal',20)"
+    },
+    "responseClearCookie": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "response.clearCookie('cartTotal')",
+        "body": [
+            "response.clearCookie('$1')"
+        ],
+        "description": "Response : response.clearCookie('cartTotal')"
+    },
+    "responsePlainCookie": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "response.plainCookie('cartTotal',20)",
+        "body": [
+            "response.plainCookie('$1',$2)"
+        ],
+        "description": "Response : response.plainCookie('cartTotal',20)"
+    },
+    "responseRedirect": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "response.redirect('/example')",
+        "body": [
+            "response.redirect('/$1')"
+        ],
+        "description": "Response : response.redirect('/example')"
+    },
+    "responseAttachment": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "response.attachment(Helpers.tmpPath('uploads/avatar.jpg'))",
+        "body": [
+            "response.attachment(",
+            "Helpers.tmpPath('uploads/$1')",
+            ")"
+
+        ],
+        "description": "Response : response.attachment(Helpers.tmpPath('uploads/avatar.jpg'))"
+    },
+    "responseImplicitEnd": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "response.implicitEnd = false",
+        "body": [
+            "response.implicitEnd = $1"
+        ],
+        "description": "Response : response.implicitEnd = false"
+    },
+    "request.all": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.all()",
+        "body": [
+            "request.all()"
+        ],
+        "description": "Request : request.all()"
+    },
+    "request.get": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.get()",
+        "body": [
+            "request.get()"
+        ],
+        "description": "Request : request.get()"
+    },
+    "request.post": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.post()",
+        "body": [
+            "request.post()"
+        ],
+        "description": "Request : request.post()"
+    },
+    "request.only": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.only(['example1', 'example2', 'example3'])",
+        "body": [
+            "request.only(['$1', '$2'])"
+        ],
+        "description": "Request : request.only(['example1', 'example2', 'example3'])"
+    },
+    "request.collect": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.collect(['example1', 'example2', 'example3'])",
+        "body": [
+            "request.collect(['$1', '$2'])"
+        ],
+        "description": "Request : request.collect(['example1', 'example2', 'example3'])"
+    },
+    "request.except": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.except(['csrf_token', 'submit'])",
+        "body": [
+            "request.except(['csrf_token', 'submit'])"
+        ],
+        "description": "Request : request.except(['csrf_token', 'submit'])"
+    },
+    "request.input": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.input('drink', 'coffee')",
+        "body": [
+            "request.input('$1', '$2')"
+        ],
+        "description": "Request : request.input('drink', 'coffee')"
+    },
+    "request.header": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.header('example')",
+        "body": [
+            "request.header('$1')"
+        ],
+        "description": "Request : request.header('$1')"
+    },
+    "request.headers()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.headers()",
+        "body": [
+            "request.headers()"
+        ],
+        "description": "Request : request.headers()"
+    },
+    "request.cookie": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.cookie('example', 'default value')",
+        "body": [
+            "request.cookie('$1', $2)"
+        ],
+        "description": "Request : request.headers('example', 'default value')"
+    },
+    "request.cookies": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.cookies()",
+        "body": [
+            "request.cookies()"
+        ],
+        "description": "Request : request.cookies()"
+    },
+    "request.plainCookie": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.plainCookie('cart_total')",
+        "body": [
+            "request.plainCookie('$1')"
+        ],
+        "description": "Request : request.plainCookie('cart_total')"
+    },
+    "request.plainCookies": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.plainCookies()",
+        "body": [
+            "request.plainCookies()"
+        ],
+        "description": "Request : request.plainCookies()"
+    },
+    "request.accepts": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.accepts(['example', 'example1'])",
+        "body": [
+            "request.plainCookies(['$1', '$2'])"
+        ],
+        "description": "Request : request.accepts(['json', 'html'])"
+    },
+    "request.language": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.language(['en', 'fr'])",
+        "body": [
+            "request.language(['$1', '$2'])"
+        ],
+        "description": "Request : request.language(['en', 'fr'])"
+    },
+    "request.url()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.url()",
+        "body": [
+            "request.url()"
+        ],
+        "description": "Request : request.url()"
+    },
+    "request.originalUrl()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.originalUrl()",
+        "body": [
+            "request.originalUrl()"
+        ],
+        "description": "Request : request.originalUrl()"
+    },
+    "request.method()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.method()",
+        "body": [
+            "request.method()"
+        ],
+        "description": "Request : request.method()"
+    },
+    "request.intended()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.intended()",
+        "body": [
+            "request.intended()"
+        ],
+        "description": "Request : request.intended()"
+    },
+    "request.ip()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.ip()",
+        "body": [
+            "request.ip()"
+        ],
+        "description": "Request : request.ip()"
+    },
+    "request.ips()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.ips()",
+        "body": [
+            "request.ips()"
+        ],
+        "description": "Request : request.ips()"
+    },
+    "request.subdomains()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.subdomains()",
+        "body": [
+            "request.subdomains()"
+        ],
+        "description": "Request : request.subdomains()"
+    },
+    "request.ajax()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.ajax()",
+        "body": [
+            "request.ajax()"
+        ],
+        "description": "Request : request.ajax()"
+    },
+    "request.pjax()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.pjax()",
+        "body": [
+            "request.pjax()"
+        ],
+        "description": "Request : request.pjax()"
+    },
+    "request.hostname()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.hostname()",
+        "body": [
+            "request.hostname()"
+        ],
+        "description": "Request : request.hostname()"
+    },
+    "request.protocol()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.protocol()",
+        "body": [
+            "request.protocol()"
+        ],
+        "description": "Request : request.protocol()"
+    },
+    "request.hasBody()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.hasBody()",
+        "body": [
+            "request.hasBody()"
+        ],
+        "description": "Request : request.hasBody()"
+    },
+    "request.match()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.match(['posts/:id'])",
+        "body": [
+            "request.match(['$1'])"
+        ],
+        "description": "Request : request.match(['posts/:id'])"
+    },
+    "request.is()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "request.is(['json'])",
+        "body": [
+            "request.is(['$1'])"
+        ],
+        "description": "Request : request.is(['json', 'html']) or request.is(['application/*'])"
+    },
+    "view.render()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "view.render('templateName')",
+        "body": [
+            "view.render('$1')"
+        ],
+        "description": "View : view.render('home')"
+    },
+    "view.renderAdditionData()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "view.render('templateName', { dataObject })",
+        "body": [
+            "view.render('$1', { $2 })"
+        ],
+        "description": "View : view.render('home', { users })"
+    },
+    "middleWareHandlerMethod": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "handle()",
+        "body": [
+            "async handle ({ request }, next) {",
+            "const ip = request.ip()",
+            "request.country = geoip.lookup(ip).country",
+            "await next()",
+            "}"
+        ],
+        "description": "View : async handle({},next){ some code here...    await next() }"
+    },
+    "session.get()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "session.get('example')",
+        "body": [
+            "session.get('$1')"
+        ],
+        "description": "Session : session.get('username')"
+    },
+    "session.put()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "session.put('exampleField','newValue')",
+        "body": [
+            "session.put('$1','$2')"
+        ],
+        "description": "Session : session.put('exampleField','newValue')"
+    },
+    "session.all()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "session.all()",
+        "body": [
+            "session.all()"
+        ],
+        "description": "Session : session.all()"
+    },
+    "session.clear()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "session.clear()",
+        "body": [
+            "session.clear()"
+        ],
+        "description": "Session : session.clear()"
+    },
+    "session.flashAll()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "session.flashAll()",
+        "body": [
+            "session.flashAll()"
+        ],
+        "description": "Session : session.flashAll()"
+    },
+    "session.forget()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "session.forget('fieldName')",
+        "body": [
+            "session.forget('$1')"
+        ],
+        "description": "Session : session.forget('example')"
+    },
+    "session.pull()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "session.pull('fieldName')",
+        "body": [
+            "session.pull('$1')"
+        ],
+        "description": "Session : session.pull('example')"
+    },
+    "session.increment()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "session.increment('example', byValue)",
+        "body": [
+            "session.increment('$1', $2)"
+        ],
+        "description": "Session : session.increment('counter', 5) or session.increment('counter')"
+    },
+    "session.decrement()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "session.decrement('example', byValue)",
+        "body": [
+            "session.decrement('$1', $2)"
+        ],
+        "description": "Session : session.decrement('counter', 5) or session.decrement('counter')"
+    },
+    "session.flashOnly()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "session.flashOnly(['example1', 'example2'])",
+        "body": [
+            "session.flashOnly(['$1', '$2'])"
+        ],
+        "description": "Session : session.flashOnly(['username', 'email'])"
+    },
+    "session.flashExcept()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "session.flashExcept(['example1', 'example2'])",
+        "body": [
+            "session.flashExcept(['$1', '$2'])"
+        ],
+        "description": "Session : session.flashExcept(['username', 'email'])"
+    },
+    "session.flash()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "session.flash({ exampleField: 'ExampleMessage' })",
+        "body": [
+            "session.flash({ $1: '$2' })"
+        ],
+        "description": "Session : session.flash({ notification: 'You have been redirected back' })"
+    },
+    "session.withErrors()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "session.withErrors([{ ExampleField: 'ExampleValue', message: 'ExampleMessage' }]).flashAll()",
+        "body": [
+            "session.withErrors([{ $1: '$2', message: '$3' }]).flashAll()"
+        ],
+        "description": "Session : session.withErrors([{ field: 'username', message: 'Error message' }]).flashAll()"
+    },
+    "auth.attempt()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "auth.attempt(uid, password).remember(boolean)",
+        "body": [
+            "auth.attempt($1, $2).remember($3)"
+        ],
+        "description": "Auth : auth.attempt(email, password).remember(true)"
+    },
+    "auth.login()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "auth.login(user)",
+        "body": [
+            "auth.login($1)"
+        ],
+        "description": "Auth : auth.login(user)"
+    },
+    "auth.loginViaId()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "auth.loginViaId(userId)",
+        "body": [
+            "auth.loginViaId($1)"
+        ],
+        "description": "Auth : auth.loginViaId(1)"
+    },
+    "auth.check()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "auth.check()",
+        "body": [
+            "auth.check()"
+        ],
+        "description": "Auth : auth.check()"
+    },
+    "auth.getUser()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "auth.getUser()",
+        "body": [
+            "auth.getUser()"
+        ],
+        "description": "Auth : auth.getUser()"
+    },
+    "auth.generate()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "auth.generate(example)",
+        "body": [
+            "auth.generate($1)"
+        ],
+        "description": "Auth : const user = await User.find(1);await auth.generate(user)"
+    },
+    "auth.logout()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "auth.logout()",
+        "body": [
+            "auth.logout()"
+        ],
+        "description": "Auth : auth.logout()"
+    },
+    "auth.withRefreshToken()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".withRefreshToken()",
+        "body": [
+            ".withRefreshToken()"
+        ],
+        "description": "Auth : .withRefreshToken()"
+    },
+    "auth.newRefreshToken()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".newRefreshToken()",
+        "body": [
+            ".newRefreshToken()"
+        ],
+        "description": "Auth : .newRefreshToken()"
+    },
+    "auth.generateForRefreshToken()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".generateForRefreshToken(request.input('refresh_token'))",
+        "body": [
+            ".generateForRefreshToken($1)"
+        ],
+        "description": "Auth : .generateForRefreshToken(request.input('refresh_token'))"
+
+    },
+    "auth.listTokens()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": ".listTokens()",
+        "body": [
+            ".listTokens()"
+        ],
+        "description": "Auth : await auth.listTokens()"
+
+    },
+    "auth.authenticator()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "auth.authenticator('AuthenticationWay')",
+        "body": [
+            "auth.authenticator('$1')"
+        ],
+        "description": "Auth : await auth.authenticator('jwt').generate(user)"
+
+    }
+
+
+}

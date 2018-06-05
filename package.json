@@ -1,0 +1,33 @@
+{
+    "name": "adonisjs-snippets",
+    "displayName": "AdonisJs 4.1 Snippets",
+    "description": "Starter AdonisJs Snippets For Poor Lazy Developers",
+    "version": "0.2.1",
+    "publisher": "EmadFanaian",
+    "icon": "images/icon.png",
+    "engines": {
+        "vscode": "^1.9.1"
+    },
+    "galleryBanner": {
+        "color": "#333",
+        "theme": "dark"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [{
+            "language": "javascript",
+            "path": "./snippets/snippets.json"
+        }]
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/EmadFani/adonisjs-vscode-snippet/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/EmadFani/adonisjs-vscode-snippet.git"
+    },
+    "homepage": "https://github.com/EmadFani/adonisjs-vscode-snippet/blob/master/README.md"
+}
