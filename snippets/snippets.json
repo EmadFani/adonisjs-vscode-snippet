@@ -567,14 +567,6 @@
         ],
         "description": "migration, adonisjs Unique"
     },
-    ".nutNullable": {
-        "scope": "javascript,es6,js,edge,adonisjs",
-        "prefix": ".nutNullable()",
-        "body": [
-            ".nutNullable()"
-        ],
-        "description": "migration, adonisjs nutNullable"
-    },
     ".onDelete": {
         "scope": "javascript,es6,js,edge,adonisjs",
         "prefix": ".onDelete(RESTRICT, CASCADE, SET NULL, NO ACTION)",
@@ -1358,8 +1350,159 @@
             "auth.authenticator('$1')"
         ],
         "description": "Auth : await auth.authenticator('jwt').generate(user)"
-
-    }
+    },
+    "Redis.get()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Redis.get('key')",
+        "body": [
+            "Redis.get('$1')"
+        ],
+        "description": "Redis.get('users')"
+    },
+    "Redis.set()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Redis.set('key', 'value')",
+        "body": [
+            "Redis.set('users', JSON.stringify(users))"
+        ],
+        "description": "set a key and a value as string"
+    },
+    "Redis.hmset()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Redis.hmset('$1', 'unique', JSON.stringify(value))",
+        "body": [
+            "Redis.hmset('$1', $2, JSON.stringify($3))"
+        ],
+        "description": "Redis.hmset('users', user.username, JSON.stringify(user))"
+    },
+    "Redis.hmget()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Redis.hmget('$1', 'unique')",
+        "body": [
+            "Redis.hmget('$1', '$2')"
+        ],
+        "description": "Redis.hmget('users', 'user.username')"
+    },
+    "Redis.subscribe() async": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Redis.subscribe('$1', async ($1) => { console.log('received', $1) })",
+        "body": [
+            "Redis.subscribe('$1', async ($1) => { console.log('received ', $1) })"
+        ],
+        "description": "async Redis.subscribe('music', async (track) => { console.log('received ', track) })"
+    },
+    "Redis.publish()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Redis.publish('$1', $2)",
+        "body": [
+            "Redis.publish('$1', $2)"
+        ],
+        "description": "Redis.publish('music', track)"
+    },
+    "Redis.subscribe() normal": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Redis.subscribe('music', (track) { console.log(track) })",
+        "body": [
+            "Redis.subscribe('$1', ($2) { console.log($2) })"
+        ],
+        "description": "Redis.subscribe('music', (track) { console.log(track) })"
+    },
+    "Redis.psubscribe()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Redis.psubscribe('h?llo', function (pattern, message, channel) {})",
+        "body": [
+            "Redis.psubscribe('$1', function (pattern, message, channel) {})"
+        ],
+        "description": "Subscribe to a pattern : Redis.psubscribe('h?llo', function (pattern, message, channel) {})"
+    },
+    "Redis.unsubscribe()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Redis.unsubscribe('music')",
+        "body": [
+            "Redis.unsubscribe('$1')"
+        ],
+        "description": "Redis.unsubscribe('music')"
+    },
+    "Redis.punsubscribe()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Redis.punsubscribe('music')",
+        "body": [
+            "Redis.punsubscribe('$1')"
+        ],
+        "description": "Redis.punsubscribe('music')"
+    },
+    "Redis.connection()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Redis.connection('ConnectionName').get('users')",
+        "body": [
+            "Redis.connection('$1').get('$2')"
+        ],
+        "description": "Redis.connection('ConnectionName').get('users')"
+    },
+    "Redis.quit()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Redis.quit(['primary', 'secondary'])",
+        "body": [
+            "Redis.quit(['primary', 'secondary'])"
+        ],
+        "description": "Array Example : Redis.quit(['primary', 'secondary']) And single Example await Redis.quit('primary')"
+    },
+    "Factory.blueprint()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Factory.blueprint('$1', (faker) => { return {$2: faker.$3()} })",
+        "body": [
+            "Factory.blueprint('$1', (faker) => { return {$2: faker.$3()} })"
+        ],
+        "description": "Factory.blueprint('users', (faker) => { return {username: faker.username()} })"
+    },
+    "Factory.get()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Factory.get('$1').create()",
+        "body": [
+            "Factory.get('$1').create()"
+        ],
+        "description": "Factory.get('users').create()"
+    },
+    "Factory.get().table": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Factory.get('$1').table('$2').create()",
+        "body": [
+            "Factory.get('$1').table('$2').create()"
+        ],
+        "description": "Factory.get('users').table('my_users').create()"
+    },
+    "Factory.get().returning": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Factory.get('$1').returning('$2').create()",
+        "body": [
+            "Factory.get('$1').returning('$2').create()"
+        ],
+        "description": "Factory.get('users').returning('id').create()"
+    },
+    "Factory.get().connection": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Factory.get('$1').connection('$2').returning('$3').create()",
+        "body": [
+            "Factory.get('$1').connection('$2').returning('$3').create()"
+        ],
+        "description": "Factory.get('users').connection('mysql').returning('id').create()"
+    },
+    "Factory.get().createMany": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Factory.get('$1').createMany($2)",
+        "body": [
+            "Factory.get('$1').createMany($2)"
+        ],
+        "description": "Factory.get('users').createMany(3)"
+    },
+    "Factory.model()": {
+        "scope": "javascript,es6,js,edge,adonisjs",
+        "prefix": "Factory.model('App/Models/$1').create({ status: '$2' })",
+        "body": [
+            "Factory.model('App/Models/$1').create({ status: '$2' })"
+        ],
+        "description": "Factory.model('App/Models/User').create({ status: 'admin' })"
+    },
 
 
 }
