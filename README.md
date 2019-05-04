@@ -19,6 +19,8 @@ This extension adds rich AdonisJs Support For poor Developers to VS Code, includ
 - Route Snippets Completed
 - FileUpload Snippets Completed
 - Controller Snippets Completed
+- Factory Snippets Completed
+- Redis Snippets Completed
 - And many more ...
 
 ### Update 1
