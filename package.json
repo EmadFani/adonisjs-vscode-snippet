@@ -2,7 +2,7 @@
     "name": "adonisjs-snippets",
     "displayName": "AdonisJs 4.1 Snippets",
     "description": "Starter AdonisJs Snippets For Poor Lazy Developers",
-    "version": "0.2.1",
+    "version": "1.0.0",
     "publisher": "EmadFanaian",
     "icon": "images/icon.png",
     "engines": {
